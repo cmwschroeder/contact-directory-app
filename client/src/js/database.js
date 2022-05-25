@@ -23,7 +23,6 @@ export const postDb = async (name, home, cell, email) => {
     const store = tx.objectStore('contact');
     const request = store.add({ name: name, home_phone: home, cell_phone: cell, email: email });
     const result = await request;
-    // console.log('🚀 - data saved to the database', result);
 };
 
 // TODO: Complete the getDb() function below:
@@ -34,7 +33,6 @@ export const getDb = async () => {
     const store = tx.objectStore('contact');
     const request = store.getAll();
     const result = await request;
-    console.log('result.value: ', result);
     return result;
 };
 
@@ -46,7 +44,6 @@ export const deleteDb = async (id) => {
     const store = tx.objectStore('contact');
     const request = store.delete(id);
     const result = await request;
-    console.log('result.value: ', result);
     return result;
 };
 
