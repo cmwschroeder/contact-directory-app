@@ -1,6 +1,6 @@
 // TODO: Create a service worker that caches static assets:
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+import { StaleWhileRevalidate } from 'workbox-strategies';
 import { precacheAndRoute } from 'workbox-precaching';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 
